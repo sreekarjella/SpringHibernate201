@@ -1,0 +1,13 @@
+com\mindtree\controller\TaxController.class
+com\mindtree\dao\TaxDaoImpl.class
+com\mindtree\dao\TaxDao.class
+com\mindtree\entity\Zone.class
+com\mindtree\entity\Category.class
+com\mindtree\service\TaxService.class
+com\mindtree\model\GetUavModel.class
+com\mindtree\model\PaidTax.class
+com\mindtree\entity\PropertyStatus.class
+com\mindtree\service\TaxServiceImpl.class
+com\mindtree\entity\Uav.class
+com\mindtree\model\ReportModel.class
+com\mindtree\entity\Report.class

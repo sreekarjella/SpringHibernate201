@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="calculateTax_js.js"></script>
+<title>TAX FORUM</title>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="header clearfix">
+					<h2 class="text-muted">Tax Forum</h2>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12">
+				<div class="jumbotron">
+					<form id="form1">
+						<div class="form-group row">
+							<label class="col-2 col-form-label">Year of Assessment:</label>
+							<div class="col-8">
+								<input type="text" class="form-control" id="assessYear" />
+							</div>
+						</div>	
+						<div class="form-group row">
+							<label class="col-2 col-form-label">Name of the Owner:</label>
+							<div class="col-8">
+								<input type="text" class="form-control" id="name" />
+							</div>
+						</div>	
+						<div class="form-group row">
+							<label class="col-2 col-form-label">Email:</label>
+							<div class="col-8">
+								<input type="text" class="form-control" id="email" />
+							</div>
+						</div>	
+						<div class="form-group row">
+							<label class="col-2 col-form-label">Address:</label>
+							<div class="col-8">
+								<input type="text" class="form-control" id="address" />
+							</div>
+						</div>	
+						<div class="form-group row">
+							<label class="col-2 col-form-label">Zonal Classification:</label>
+							<div class="col-8">
+								<select id="zones" class="form-control"></select>
+							</div>
+						</div>	
+						<div class="form-group row">
+							<label class="col-2 col-form-label">Description of Property:</label>
+							<div class="col-8">
+								<select id="categories" class="form-control"></select>
+							</div>
+						</div>	
+						<div class="form-group row">
+							<label class="col-2 col-form-label">Status:</label>
+							<div class="col-8">
+								<select id="statuses" class="form-control"></select>
+							</div>
+						</div>	
+						<div class="form-group row">
+							<label class="col-2 col-form-label">Building Constructed Year:</label>
+							<div class="col-8">
+								<input type="text" class="form-control" id="startYear" />
+							</div>
+						</div>
+						<div class="form-group row">
+							<label class="col-2 col-form-label">Built up Area (square feet):</label>
+							<div class="col-8">
+								<input type="text" class="form-control" id="area" />
+							</div>
+						</div>
+						<div class="form-group row">
+							<label class="col-2 col-form-label">Total Payable Tax:</label>
+							<div class="col-8">
+								<input type="text" class="form-control" id="tax" onclick="getUav()" />
+							</div>
+						</div>
+						<a href="index.html" class="btn btn-danger">Cancel</a>
+						<input type="button" class="btn btn-success" onclick="postTaxViaAjax()" value="Pay Tax">
+					</form>
+					<div id="div1" class="alert alert-success alert-dismissible">
+						<button type="button" class="close" data-dismiss="alert">&times;</button>
+						<strong>Success!</strong> The tax has been paid.
+					</div>
+					<div id="div2" class="alert alert-danger alert-dismissible">
+						<button type="button" class="close" data-dismiss="alert">&times;</button>
+						<strong>Danger!</strong> Some error occurred. Please try again later.
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12">
+				<footer class="footer">
+					<p class="text-center">
+					<br>
+					Copyright &copy;Govt. of India 1995
+					</p>
+				</footer>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
